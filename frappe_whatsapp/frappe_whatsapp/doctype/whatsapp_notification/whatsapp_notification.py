@@ -85,7 +85,7 @@ class WhatsAppNotification(Document):
                 }
             }
 
-            # Pass parameter values
+            # Pass parameter values for body
             if self.fields:
                 parameters = []
                 for field in self.fields:
@@ -98,6 +98,22 @@ class WhatsAppNotification(Document):
                     "type": "body",
                     "parameters": parameters
                 }]
+
+            # Pass parameter values for button
+            if self.button_fields:
+                parameters = []
+                for field in self.button_fields:
+                    parameters.append({
+                        "type": "text",
+                        "text": doc_data[field.field_name]
+                    })
+
+                data['template']["components"].append({
+                    "type": "button",
+                    "sub_type": "url",
+                    "index": f"{field.idx}",
+                    "parameters": parameters
+                })
 
             if self.attach_document_print:
                 # frappe.db.begin()

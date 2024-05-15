@@ -24,6 +24,7 @@
   "condition",
   "column_break_12",
   "fields",
+  "button_fields",
   "help_section",
   "help_html",
   "header_type"
@@ -109,10 +110,10 @@
    "fieldtype": "Column Break"
   },
   {
-   "description": "Enter fields in the right sequence as per the template parameters.",
+   "description": "Enter fields (for the body) in the right sequence as per the template parameters.",
    "fieldname": "fields",
    "fieldtype": "Table",
-   "label": "Fields",
+   "label": "Body Fields",
    "options": "WhatsApp Message Fields"
   },
   {
@@ -164,11 +165,18 @@
    "fieldname": "attach_from_field",
    "fieldtype": "Data",
    "label": "Attach from field "
+  },
+  {
+   "description": "Enter fields (for the button) in the right sequence as per the template parameters.",
+   "fieldname": "button_fields",
+   "fieldtype": "Table",
+   "label": "Button Fields",
+   "options": "WhatsApp Message Fields"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-23 17:18:54.663077",
+ "modified": "2024-05-15 12:54:30.764735",
  "modified_by": "Administrator",
  "module": "Frappe Whatsapp",
  "name": "WhatsApp Notification",

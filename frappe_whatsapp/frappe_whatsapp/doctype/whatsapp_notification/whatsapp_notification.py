@@ -111,7 +111,7 @@ class WhatsAppNotification(Document):
                 data['template']["components"].append({
                     "type": "button",
                     "sub_type": "url",
-                    "index": f"{field.idx}",
+                    "index": f"{field.idx - 1}",
                     "parameters": parameters
                 })
 
